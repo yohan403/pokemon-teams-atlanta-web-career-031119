@@ -14,15 +14,13 @@ function fetchAllTrainers() {
 
 function addTeam(team) {
     // console.log(team)
-    const div = document.createElement('div')
+    let div = document.createElement('div')
     div.className = 'card'
     div.dataset.id = team.id
-    // console.log(div)
-    team.pokemons.forEach(pokemon => addPokemon(pokemon))
 
-}
+    let ul = document.createElement('ul')
+    team.pokemons
 
-function addPokemon(pokemon) {
-    console.log(pokemon)
-    
+    div.appendChild(ul)
+    document.querySelector('main').appendChild(div)
 }
